@@ -30,9 +30,7 @@ function Hero() {
       />
             </div>
         </div>
-        <div className ='w-full bg-[#001d46] p-2 text-white text-xl font-semibold mt-3'>
-            <marquee>Registration for the next Vetinary Clinic is now open!</marquee>
-            </div>
+       
     </div>
   )
 }
