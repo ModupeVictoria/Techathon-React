@@ -4,7 +4,7 @@ import { FaAmbulance, FaClinicMedical, FaHospital, FaHotel, FaTooth, FaHandHoldi
 function Services() {
   return (
     <div className="bg-[#eaf4fe] pt-12 pb-12">
-      <div className="container items-center mx-auto">
+      <div className="container items-center mx-auto px-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-3 text-[#001d46]">
             What we Offer

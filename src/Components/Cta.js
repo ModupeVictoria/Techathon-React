@@ -4,10 +4,10 @@ import React from 'react'
 function Cta() {
   return (
     <div className='bg-[#eaf4fe] pt-12 pb-12 w-full '>
-        <div className="container  bg-[#d5e5f5] py-8 px-8 items-center mx-auto rounded-lg">
+        <div className="container  bg-[#d5e5f5] py-8 px-16 w-[50%]items-center mx-auto rounded-lg ">
             <h1 className='text-center text-2xl text-[#001d46]'>Subscribe to our News Letter</h1>
             
-<div className="mb-6 mt-6 w-[70%] items-center mx-auto">
+<div className="mb-6 mt-6 w-[100%] md:w-[70%] items-center mx-auto">
 <form>   
     <div className="relative">
         

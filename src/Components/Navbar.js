@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Transition } from "@headlessui/react";
 import {  NavLink } from "react-router-dom";
 
 function Navbar() {
@@ -7,7 +8,7 @@ function Navbar() {
     
     <div>
       <nav className="bg-[#d5e5f5] px-2 sm:px-4 py-2.5  fixed w-full z-20 top-0 left-0 border-b border-gray-200">
-        <div className="container flex flex-wrap justify-between items-center mx-auto">
+        <div className="container flex flex-wrap justify-between items-center mx-auto px-16">
         <NavLink to="/" className="flex items-center">
            <span className="self-center text-2xl font-semibold whitespace-nowrap text-[#6692d7] italic"
            
@@ -64,7 +65,7 @@ function Navbar() {
 
             <NavLink
               to="/"
-              className="block py-2 pr-4 pl-3 mx-4 text-white bg-blue-700 rounded md:bg-transparent md:p-0"
+              className="block py-2 pr-4 pl-3 mx-4 rounded md:bg-transparent md:p-0"
               aria-current="page"
               style={({isActive}) =>
               isActive ? {color: '#6692d7'} : {color: '#001d46'}
@@ -101,6 +102,53 @@ function Navbar() {
           </div>
           
         </div>
+
+        <Transition
+          show={isOpen}
+          enter="transition ease-out duration-100 transform"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="transition ease-in duration-75 transform"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
+        >
+          {(ref) => (
+            <div className="md:hidden bg-white w-full" id="mobile-menu">
+              <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <NavLink
+              to="/"
+              className="block py-2 pr-4 pl-3 mx-4 text-white  rounded md:bg-transparent md:p-0"
+              aria-current="page"
+              style={({isActive}) =>
+              isActive ? {color: '#6692d7'} : {color: '#001d46'}
+            }
+            >
+              Home
+            </NavLink>
+
+            <NavLink
+              to="/register"
+              className="block py-2 pr-4 pl-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#6692d7] md:p-0"
+              style={({isActive}) =>
+              isActive ? {color: '#6692d7'} : {color: '#001d46'}
+            }
+            >
+              Register
+            </NavLink>
+
+            <NavLink
+              to="/login"
+              className="block py-2 pr-4 pl-3 mx-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#6692d7] md:p-0"
+              style={({isActive}) =>
+              isActive ? {color: '#6692d7'} : {color: '#001d46'}
+            }
+            >
+              Login
+            </NavLink>
+              </div>
+            </div>
+          )}
+        </Transition>
       </nav>
     </div>
   );

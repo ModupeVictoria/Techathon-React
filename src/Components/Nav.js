@@ -7,7 +7,7 @@ function Nav() {
   return (
     <div>
       <nav className="bg-[#d5e5f5] px-2 sm:px-4 py-2.5  fixed w-full z-20 top-0 left-0 border-b border-gray-200 ">
-        <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
           <div className="container flex flex-wrap justify-between items-center mx-auto">
             <div className="flex items-center ">
             <NavLink to="/" className="flex items-center">
@@ -57,7 +57,7 @@ function Nav() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                className="bg-[#6692d7] inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-[#4669a1] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
@@ -98,7 +98,7 @@ function Nav() {
               </button>
             </div>
           </div>
-        </div>
+       
 
         <Transition
           show={isOpen}

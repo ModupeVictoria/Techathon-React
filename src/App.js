@@ -1,7 +1,7 @@
 
 import './App.css';
 import { Routes, Route } from "react-router-dom";
-import Nav from './Components/Nav';
+import Navbar from './Components/Navbar';
 import Home from './Components/Home'
 import Login from './Components/Login'
 import Register from './Components/Register';
@@ -13,7 +13,7 @@ import Error from './Components/Error'
 function App() {
   return (
     <div>
-      <Nav/>
+      <Navbar/>
       <Routes>
            <Route exact path="/" element={<Home/>}/>
            <Route  path="/register" element={<Register/>}/>

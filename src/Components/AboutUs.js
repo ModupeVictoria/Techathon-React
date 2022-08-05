@@ -4,12 +4,12 @@ import React from 'react'
 function AboutUs() {
   return (
     <div className='bg-[#d5e5f5] pt-12 pb-12 w-full '>
-        <div className="container flex flex-col items-center mx-auto md:flex-row md:justify-between">
+        <div className="container flex flex-col items-center mx-auto md:flex-row md:justify-between px-16">
             <div>
             <img
                 src="/images/img2.jpg"
                 alt="banner"
-                className="w-[70%] mt-8 md:w-[70%] rounded-lg items-center mx-auto"
+                className="w-[100%] mt-8 md:w-[70%] rounded-lg items-center mx-auto"
       />
             </div>
             <div className='mt-12'>
